@@ -1,0 +1,416 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+margin: 0;
+padding: 0;
+border: 0;
+font-size: 100%;
+font: inherit;
+vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+display: block;
+}
+body {
+line-height: 1;
+}
+ol, ul {
+list-style: none;
+}
+blockquote, q {
+quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+content: '';
+content: none;
+}
+table {
+border-collapse: collapse;
+border-spacing: 0;
+}
+
+/* ===================================== */
+body{
+    background: #FBFBFB;
+}
+
+p, a, h1, h2, h3, ul, li, input, time {
+    font-family: "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", "Heiti TC", sans-serif;
+    line-height: 150%;
+    font-weight: 500;
+    font-size: 16px;
+}
+/* ==================================== */
+.menu {
+    display: flex;
+    justify-content: center;
+    padding: 24px 80px;
+    /* border: 2px solid red; */
+}
+
+.menu a {
+    text-decoration: none;
+    font-size: 28px;
+    font-weight: 700;
+    color: #000000;
+}
+
+.menu span{
+    width: 40px;
+    display: block;
+}
+/* ==================================== */
+.intro-area {
+    margin: 0 auto;
+    height: 834px;
+    display: flex;
+    justify-content: center;
+}
+.intro-area .photo {
+    width: 50%;
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section.png?raw=true");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.intro-area .intro {
+    width: 50%;
+    box-sizing: border-box;
+    /* border: solid 1px red; */
+    padding: 300px 80px;
+    color: #0027D5;
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+h1 {
+    font-size: 120px;
+    font-weight: 900;
+}
+
+.intro-area .intro p {
+    font-size: 28px;
+    font-weight: 700;
+}
+
+@media (max-width:1320px) {
+    .intro-area {
+        flex-wrap:wrap;
+        height: auto;
+    }
+    .intro-area .photo {
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+    .intro-area .intro {
+        width: 100%;
+        height: 180px;
+        padding: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+    h1 {
+        font-size: 52px;
+    }
+}
+/* ==================================== */
+.new-article-area {
+    margin: 0 auto;
+    height: 640px;
+    display: flex;
+    justify-content: center;
+}
+.new-article-area .article-pic {
+    width: 50%;
+    /* border: solid 1px red; */
+    background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog-content/About%20Section.png?raw=true");
+    margin-right: 24px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+}
+
+.new-article-area .new-article {
+    width: 50%;
+    /* border: solid 1px red; */
+    display: flex;
+    align-items: center;
+}
+
+.new-article-area .new-article .article {
+    width: 636px;
+}
+
+@media (max-width:1320px) {
+    .new-article-area {
+        flex-wrap:wrap;
+        height: auto;
+    }
+    .new-article-area .article-pic {
+        margin-right: 0px;
+        width: 100%;
+        aspect-ratio: 1/1;
+    }
+    .new-article-area .new-article {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 48px 12px;
+        width: 100%;
+    }
+    .new-article-area .new-article .article {
+        padding: 0px;
+        margin: 0px;
+        width: 100%;
+    }
+}
+/* ==================================== */
+.search-area {
+    margin-top: 80px;
+    display: flex;
+    justify-content: center;
+}
+.block {
+    width: 1320px;
+}
+.search-box {
+    border: solid 1px #4B4B4B;
+    border-radius: 40px;
+    width: 416px;
+    padding: 16px 16px;
+    padding-right: 48px;
+    display: flex;
+}
+
+.search-area .icon{
+    font-size: 24px;
+}
+
+.search-box input {
+    all: unset;
+    display: inline-block;
+    width: 100%;
+}
+
+@media (max-width:1320px) {
+    .search-box {
+        width: 100%;
+        margin: 0px 12px;
+    }
+    .search-area .block {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        /* padding: 0px 12px; */
+    }
+    .search-area {
+        margin-top: 64px;
+    }
+}
+/* ======================== */
+.article-section{
+    border: solid 1px #6C757D;
+}
+.articles-area{
+    width: 100%;
+}
+
+.container{
+    width: 1320px;
+    /* background: yellow; */
+    margin: 0 auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.article{
+    /* border: solid 1px green;  */
+    width: 416px;
+    margin: 40px 12px;
+}
+
+.article-img{
+    display:block;
+    width: 100%;
+    height: 216px;
+    margin-bottom: 16px;
+}
+
+.article time{
+    margin-bottom: 4px;
+}
+
+.article .tag{
+    /* background: green; */
+    display: flex;
+    align-items: center;
+}
+
+.article .tag a{
+    text-decoration: none;
+    font-size: 24px;
+    color: #0027D5;
+    margin-right: 8px;
+}
+
+.article .tag .special{
+    font-weight: 700;
+    font-size: 16px;
+    color: #FFFFFF;
+    background: #0027D5;
+    /* border: solid 1px #000000; */
+    border-radius: 40px;
+    padding: 6px 12px;
+    margin-right: 0px;
+}
+
+.article h2{
+    font-size: 28px;
+    margin-bottom: 8px;
+    font-weight: 700;
+}
+
+.article-content-0{
+    width: 100%;
+    margin-bottom: 16px;
+}
+
+.article-content{
+    color: #4B4B4B;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow:hidden;
+}
+
+
+.article-link{
+    display: inline-block; 
+    text-decoration: none;
+    color: #4B4B4B;
+    /* background: green; */
+    border: solid 1px #000000;
+    border-radius: 40px;
+    padding: 8px 16px;
+}
+
+.article-link:hover{
+    background: #86d0f0;
+}
+
+@media (max-width:1340px) {
+    .container{
+        width: 100%;   
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        /* border: solid 5px red; */
+        box-sizing: border-box;
+    }
+    .article{
+        margin: 16px 12px;
+    }
+}
+/* ===================== */
+.pages{
+    width: 100%;
+}
+.page-area{
+    margin: 0 auto;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 328px;
+    border-radius: 40px;
+    background: #FFFFFF;
+}
+
+.page-area .page {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.page-area a{
+    text-decoration: none;
+    display: inline-block;
+    color: #4B4B4B;
+}
+
+@media (max-width:1320px) {
+    .page-area{
+        width: auto;
+        margin-top: 24px;
+        margin-bottom: 64px;
+    }
+}
+/* ===================== */
+
+.contact{
+    width: 1320px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #FBFBFB;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+.contact .mail{
+    display: block;
+    font-size: 32px;
+}
+.contact .social-media{
+    width: 236px;
+    height: 44px;
+    display: flex;
+    justify-content: space-between;
+}
+.contact .social-media .icon img:hover{
+    filter: brightness(3.0); 
+}
+
+@media (max-width:1320px) {
+    .contact{
+        width: auto;
+    }
+}
+
+@media (max-width:768px) {
+    .contact{
+        display: none;
+    }
+}
+
+/* ===================== */
+.rights-area{
+    width: 100%;
+    margin: 0 auto;
+    background: #FFFFFF;
+    padding-top: 24px;
+    padding-bottom: 24px;
+    text-align: center;
+}
