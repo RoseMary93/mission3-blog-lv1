@@ -43,6 +43,10 @@ border-spacing: 0;
 }
 
 /* ===================================== */
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 body{
     background: #FBFBFB;
 }
@@ -52,6 +56,10 @@ p, a, h1, h2, h3, ul, li, input, time {
     line-height: 150%;
     font-weight: 500;
     font-size: 16px;
+}
+
+img {
+    object-fit: cover;
 }
 /* ==================================== */
 .menu {
@@ -91,12 +99,17 @@ p, a, h1, h2, h3, ul, li, input, time {
     width: 50%;
     box-sizing: border-box;
     /* border: solid 1px red; */
-    padding: 300px 80px;
+    padding-left: 80px;
+    padding-right: 80px;
+    /* padding: 300px 80px; */
     color: #0027D5;
     background-image: url("https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/index/Hero%20Section2.png?raw=true");
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 h1 {
@@ -109,7 +122,7 @@ h1 {
     font-weight: 700;
 }
 
-@media (max-width:1320px) {
+@media (max-width:992px) {
     .intro-area {
         flex-wrap:wrap;
         height: auto;
@@ -159,7 +172,7 @@ h1 {
     width: 636px;
 }
 
-@media (max-width:1320px) {
+@media (max-width:992px) {
     .new-article-area {
         flex-wrap:wrap;
         height: auto;
@@ -213,14 +226,13 @@ h1 {
 
 @media (max-width:1320px) {
     .search-box {
-        width: 100%;
+        max-width: 416px;
         margin: 0px 12px;
     }
     .search-area .block {
-        width: 100%;
+        max-width: 880px;
         display: flex;
-        justify-content: center;
-        /* padding: 0px 12px; */
+        justify-content: flex-start;
     }
     .search-area {
         margin-top: 64px;
@@ -228,14 +240,15 @@ h1 {
 }
 /* ======================== */
 .article-section{
-    border: solid 1px #6C757D;
+    border-top: solid 1px #6C757D;
+    border-bottom: solid 1px #6C757D;
 }
-.articles-area{
+/* .articles-area{
     width: 100%;
-}
+} */
 
 .container{
-    width: 1320px;
+    max-width: 1320px;
     /* background: yellow; */
     margin: 0 auto;
     display: flex;
@@ -320,16 +333,22 @@ h1 {
 
 @media (max-width:1340px) {
     .container{
-        width: 100%;   
+        /* width: 100%; */
+        max-width: 880px;
         display: flex;
         flex-wrap: wrap;
-        justify-content: center;
-        margin: 0;
+        justify-content: flex-start;
+        margin: 0 auto;
         /* border: solid 5px red; */
         box-sizing: border-box;
     }
     .article{
         margin: 16px 12px;
+    }
+}
+@media (max-width:880px) {
+    .container{
+        justify-content: center;
     }
 }
 /* ===================== */
@@ -360,9 +379,13 @@ h1 {
     color: #4B4B4B;
 }
 
+.page-area a:active{
+    color: #0027D5;
+}
+
 @media (max-width:1320px) {
     .page-area{
-        width: auto;
+        /* width: auto; */
         margin-top: 24px;
         margin-bottom: 64px;
     }
@@ -370,7 +393,7 @@ h1 {
 /* ===================== */
 
 .contact{
-    width: 1320px;
+    max-width: 1320px;
     margin: 0 auto;
     display: flex;
     align-items: center;
